@@ -5,6 +5,9 @@ class DataBase():
     Класс взаимодействия с БД
     ''' 
     def __init__(self) -> None:
+        ... 
+
+    def set_connect(self): 
         self.conn = psycopg2.connect(
             database='db_pots',
             user='postgres',
@@ -15,16 +18,24 @@ class DataBase():
         
         self.cur = self.conn.cursor()
     
-    def __del__(self): 
-        self.conn.close()
-    
     def process_authorization(self, login, password): 
-        self.cur.execute(f'SELCT role FROM users WHERE login={login} AND password_log={password}')
-        self.cur.fetchone()
+        '''
+        param:
+        return:  
+        '''
+        data = self.cur.execute(f"SELECT role_user FROM users WHERE login='{login}' AND password_log='{password}'")
+        data = self.cur.fetchone()
+        return data 
         
     def select_products(self): 
-        self.cur.execute('SELECT * FROM products')
-        self.cur.fetchall()
+        data = self.cur.execute('SELECT * FROM products')
+        data = self.cur.fetchall()
+        return data 
+    
+    def select_user(self, user: str): 
+        data = self.cur.execute(f"SELECT fio FROM users WHERE login='{user}'")
+        data = self.cur.fetchone()
+        return data
     
     def add_products(self): 
         self.cur.execute('')
