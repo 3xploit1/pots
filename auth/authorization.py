@@ -21,7 +21,6 @@ class Authorization(QDialog, DataBase):
         self.ui.label.setPixmap(pix)
         self.ui.label.setScaledContents(True)
         
-
     def move_admin(self): 
         '''
         Закрывает окно авторизации. Создает экземпляр класса Admin

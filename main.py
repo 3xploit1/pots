@@ -2,7 +2,7 @@ import sys
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-from utils.auth.authorization import *
+from utils.view.start import *
 
 class Application(): 
     def __init__(self) -> None:
@@ -13,7 +13,7 @@ class Application():
         Создание и вызов объекта авторизации
         '''       
         app = QApplication(sys.argv)
-        window = Authorization()
+        window = Start()
         window.show()
         sys.exit(app.exec_())
         
