@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'authorizationXIVDcb.ui'
+## Form generated from reading UI file 'authorizationdkJBKh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -36,12 +36,13 @@ class Ui_DialogAuth(object):
 
         self.verticalLayout_3.addLayout(self.verticalLayout)
 
+        self.label = QLabel(DialogAuth)
+        self.label.setObjectName(u"label")
+
+        self.verticalLayout_3.addWidget(self.label)
+
         self.verticalLayout_2 = QVBoxLayout()
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_2.addItem(self.verticalSpacer)
-
         self.btn_log_in = QPushButton(DialogAuth)
         self.btn_log_in.setObjectName(u"btn_log_in")
 
@@ -63,6 +64,7 @@ class Ui_DialogAuth(object):
 
     def retranslateUi(self, DialogAuth):
         DialogAuth.setWindowTitle(QCoreApplication.translate("DialogAuth", u"Dialog", None))
+        self.label.setText(QCoreApplication.translate("DialogAuth", u"TextLabel", None))
         self.btn_log_in.setText(QCoreApplication.translate("DialogAuth", u"\u0412\u043e\u0439\u0442\u0438", None))
         self.btn_guest.setText(QCoreApplication.translate("DialogAuth", u"\u0412\u043e\u0439\u0442\u0438 \u043a\u0430\u043a \u0433\u043e\u0441\u0442\u044c", None))
     # retranslateUi

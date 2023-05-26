@@ -16,6 +16,11 @@ class Authorization(QDialog, DataBase):
         self.set_connect()
         self.ui.btn_guest.clicked.connect(self.move_guest)
         self.ui.btn_log_in.clicked.connect(self.log_in)
+        self.setWindowIcon(QIcon('resources\/assets\/icon.ico'))
+        pix = QPixmap('resources\/assets\/logo.png')
+        self.ui.label.setPixmap(pix)
+        self.ui.label.setScaledContents(True)
+        
 
     def move_admin(self): 
         '''
